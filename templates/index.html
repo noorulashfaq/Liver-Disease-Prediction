@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liver Disease Prediction</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <h2>Liver Disease Prediction</h2>
+    <form action="http://127.0.0.1:5000/predict" method="post">
+      <label>Age: <input type="number" name="age" required /></label><br />
+      <label
+        >Gender (1 for Male, 0 for Female):
+        <input type="number" name="gender" required /></label
+      ><br />
+      <label
+        >Total Bilirubin:
+        <input
+          type="number"
+          step="0.01"
+          name="total_bilirubin"
+          required /></label
+      ><br />
+      <label
+        >Direct Bilirubin:
+        <input
+          type="number"
+          step="0.01"
+          name="direct_bilirubin"
+          required /></label
+      ><br />
+      <label
+        >Alkaline Phosphotase:
+        <input type="number" name="alkaline_phosphotase" required /></label
+      ><br />
+      <label
+        >Alamine Aminotransferase:
+        <input type="number" name="alamine_aminotransferase" required /></label
+      ><br />
+      <label
+        >Aspartate Aminotransferase:
+        <input
+          type="number"
+          name="aspartate_aminotransferase"
+          required /></label
+      ><br />
+      <label
+        >Total Proteins:
+        <input
+          type="number"
+          step="0.01"
+          name="total_protiens"
+          required /></label
+      ><br />
+      <label
+        >Albumin:
+        <input type="number" step="0.01" name="albumin" required /></label
+      ><br />
+      <label
+        >Albumin and Globulin Ratio:
+        <input
+          type="number"
+          step="0.01"
+          name="albumin_and_globulin_ratio"
+          required /></label
+      ><br />
+      <button type="submit">Predict</button>
+    </form>
+    <h3>{{ prediction_text }}</h3>
+  </body>
+</html>
